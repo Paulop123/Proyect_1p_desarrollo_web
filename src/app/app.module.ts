@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './Login/Login.component';
+import { CabeceraComponent } from './Cabecera/Cabecera.component';
+import { FooterComponent } from './Footer/Footer.component';
+import { Citas_medicasComponent } from './Citas_medicas/Citas_medicas.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [				
     AppComponent,
-      LoginComponent
+      LoginComponent,
+      CabeceraComponent,
+      FooterComponent,
+      Citas_medicasComponent
    ],
   imports: [
     BrowserModule,
