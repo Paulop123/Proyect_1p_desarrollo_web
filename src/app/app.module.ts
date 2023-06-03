@@ -20,15 +20,17 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Pagina_inicioComponent } from './Pagina_inicio/Pagina_inicio.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [					
     AppComponent,
       LoginComponent,
       CabeceraComponent,
       FooterComponent,
-      Citas_medicasComponent
-      
+      Citas_medicasComponent,
+      Pagina_inicioComponent
    ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatSelectModule,
     MatTableModule,
     MatToolbarModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule 
 
   ],
   providers: [],
