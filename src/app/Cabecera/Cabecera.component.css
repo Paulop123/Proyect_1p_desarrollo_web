@@ -1,0 +1,35 @@
+
+/*Selector de la barra de la cabecera*/
+mat-toolbar{
+
+    background-color: rgba(10, 123, 160, 0.839);
+    border-bottom: solid 2px;
+    
+  }
+
+  .icono{
+
+    color: white;
+    
+  }
+
+  /*Icono del boton de la cabecera*/
+  .icon-button{
+
+    margin: 0 auto;
+    margin-left: 63%;
+  }
+
+  .icon-button button{
+
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+
+
+  /*Titulo del banner*/
+  .banner{
+
+    margin-left: 1%;
+    font-size: 1.5rem;
+  }

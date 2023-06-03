@@ -9,6 +9,18 @@ import { CabeceraComponent } from './Cabecera/Cabecera.component';
 import { FooterComponent } from './Footer/Footer.component';
 import { Citas_medicasComponent } from './Citas_medicas/Citas_medicas.component';
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTabsModule} from '@angular/material/tabs';
+
 @NgModule({
   declarations: [				
     AppComponent,
@@ -16,11 +28,24 @@ import { Citas_medicasComponent } from './Citas_medicas/Citas_medicas.component'
       CabeceraComponent,
       FooterComponent,
       Citas_medicasComponent
+      
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatSelectModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatTabsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
