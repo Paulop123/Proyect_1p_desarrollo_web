@@ -8,7 +8,10 @@ import { Pagina_inicioComponent } from './Pagina_inicio/Pagina_inicio.component'
 
 const routes: Routes = [
 
-  {path:'', component: Pagina_inicioComponent}
+  {path:'', component: Pagina_inicioComponent},
+  {path:'Pagina_inicio', component: Pagina_inicioComponent},
+  {path:'citas_medicas', component: Citas_medicasComponent}
+  
 ];
 
 @NgModule({

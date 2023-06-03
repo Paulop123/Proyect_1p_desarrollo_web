@@ -3,12 +3,30 @@
 
   <mat-icon class="icono" fontIcon="pets"></mat-icon>
 
-  <span class="example-spacer" class="banner">Veterinaria mascota feliz</span>
+  <span class="banner">Veterinaria <p>Mascota feliz</p></span>
+
+<!--Enlaces del banner-->
+  <div class="espacio"></div>
+  <span class="banner2"> <a href="http://localhost:4200/Pagina_inicio">Inicio</a> </span>
+
+  <div class="espacio"></div>
+  <span class="banner2"> <a href="#">Quienes somos</a> </span>
+
+  <div class="espacio"></div>
+  <span class="banner2"> <a href="#">Citas</a> </span>
+
+  <div class="espacio"></div>
+  <span class="banner2"> <a href="#">Productos</a> </span>
+
+  <div class="espacio"></div>
+  <span class="banner2"> <a href="#">Registros</a> </span>
+
+  <div class="espacio"></div>
+  <span class="banner2"> <a href="#">Contactos</a> </span>
 
   <div class="espacio"></div>
 
-
-  <button mat-icon-button class="icono_inicio_sesion">
+  <button mat-icon-button class="icono_inicio_sesion" (click)="inicioSesion()">
     <mat-icon>account_box</mat-icon>
   </button>
   

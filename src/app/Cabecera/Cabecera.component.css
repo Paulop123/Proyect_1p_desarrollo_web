@@ -3,14 +3,32 @@
 /*Selector de la barra de la cabecera*/
 .cabecera{
 
-    background-color: rgba(15, 107, 138, 0.839);
+    background-color: rgba(26, 186, 218, 0.839);
     border-bottom: solid 2px;
+    min-width: 1000px;
     
   }
 
+  /*Logo de la clinica*/
   .icono{
 
     color: white;
+  }
+
+  /*Titulo del banner*/
+  .banner{
+
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2%;
+  }
+
+  .banner p{
+
+    margin-bottom: 15%;
+    font-size: 1.3rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
 /*Espacio entre span y boton*/
@@ -19,24 +37,30 @@
     display: flex;
     flex: 1 1 auto;
   }
-  /*Icono del boton de la cabecera*/
+
+  /*Icono de inicio de sesion*/
   
   .icono_inicio_sesion{
 
     color: black;
     border: px solid white;
+    background-color: lightgray;
   }
 
+  /*Selector de componente, cambia fondo icono inicio sesion*/
   .icono_inicio_sesion:hover{
 
     background-color: orange;
   }
 
-  
 
+  /*Enlaces del banner*/
 
-  /*Titulo del banner*/
-  .banner{
+  .banner2 a{
 
-    font-size: 1.5rem;
+    font-size: 0.7rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
   }
