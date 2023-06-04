@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 
     if (this.usuarioLogin.value.usuario=="kevin" && this.usuarioLogin.value.password=="123") {
 
-      this.router.navigate(['/cliente']);//Me envia a la ruta cliente
+      this.router.navigate(['/Citas_medicas']);//Me envia a la ruta cliente
       this.dialogRef.close();//cierra ventana
       
     } else {

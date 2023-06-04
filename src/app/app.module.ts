@@ -22,15 +22,23 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Pagina_inicioComponent } from './Pagina_inicio/Pagina_inicio.component';
+import { Quienes_somosComponent } from './Quienes_somos/Quienes_somos.component';
+import { ProductosComponent } from './Productos/Productos.component';
+import { RegistrosComponent } from './Registros/Registros.component';
+import { ContactosComponent } from './Contactos/Contactos.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [									
     AppComponent,
       LoginComponent,
       CabeceraComponent,
       FooterComponent,
       Citas_medicasComponent,
-      Pagina_inicioComponent
+      Pagina_inicioComponent,
+      Quienes_somosComponent,
+      ProductosComponent,
+      RegistrosComponent,
+      ContactosComponent
    ],
   imports: [
     BrowserModule,

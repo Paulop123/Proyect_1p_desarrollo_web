@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     max-width: 2560px;
-    min-width: 850px;
+    min-width: 1000px;
 
 }
 
@@ -14,7 +14,9 @@
     font-size: 1.5rem;
     font-family: sans-serif;
     font-weight: bolder;
-    color: aquamarine;
+    color: rgba(6, 56, 75, 0.907);
     margin-top: 2%;
+    text-align: center;
+    margin-bottom: 2%;
     
 }

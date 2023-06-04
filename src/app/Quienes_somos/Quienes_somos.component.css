@@ -1,0 +1,29 @@
+
+.q_somos{
+
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    max-width: 2560px;
+    min-width: 850px;
+    margin: 0 auto;
+    margin-top: 1%;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    
+}
+
+/*Espacio entre los dos parrafos de quienes somos*/
+.espacio_q_somos{
+
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.imagen{
+
+    color: blueviolet;
+}
+
