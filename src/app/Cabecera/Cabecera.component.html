@@ -26,8 +26,21 @@
 
   <div class="espacio"></div>
 
-  <button mat-icon-button class="icono_inicio_sesion" (click)="inicioSesion()">
-    <mat-icon>account_box</mat-icon>
-  </button>
+  <div *ngIf="1 !== sharedService.getTemp()">
+    <button mat-icon-button class="icono_inicio_sesion" (click)="inicioSesion()">
+      <mat-icon>account_box</mat-icon>
+    </button>
+  </div>
+
+  <div *ngIf="1 === sharedService.getTemp()">
+    <div class="nombre-usuario-container">
+    <span class="nombre_usuario">bienvenido <br> Kevin</span>
+    <div class="espacio"></div>
+    <button mat-button class="boton_cerrar_sesion" (click)="cerrarSesion()">
+      CERRAR  SESION
+    </button>
+  </div>
+  </div>
+
   
 </mat-toolbar>

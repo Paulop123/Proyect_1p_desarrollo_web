@@ -34,7 +34,7 @@
 /*Espacio entre span y boton*/
   .espacio{
 
-    display: flex;
+
     flex: 1 1 auto;
   }
 
@@ -58,9 +58,38 @@
 
   .banner2 a{
 
-    font-size: 0.7rem;
+    font-size: 0.7 rem;
     font-family: sans-serif;
     font-weight: bold;
     text-decoration: none;
     color: black;
+  }
+
+  .nombre-usuario-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el nombre y el botón */
+  }
+
+  .nombre_usuario {
+    margin-right: 10px; /* Agregar un margen izquierdo para separar el nombre de usuario */
+  }
+
+  .boton_cerrar_sesion {
+    background-color: rgb(248, 64, 64);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    font-family: Arial, sans-serif; /* Estilo de fuente */
+    font-weight: bold; /* Negrita */
+    font-style: italic; /* Cursiva */
+    
+
+  }
+  
+  .boton_cerrar_sesion:hover {
+    background-color: orange;
   }

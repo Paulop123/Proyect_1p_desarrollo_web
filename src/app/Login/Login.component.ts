@@ -3,6 +3,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Validators } from '@angular/forms';
+import { SharedService } from '../services/shared.service';
+
 
 @Component({
   selector: 'app-Login',
@@ -11,7 +13,7 @@ import { Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private dialogRef: MatDialogRef<LoginComponent>) { }
+  constructor(private router: Router, private dialogRef: MatDialogRef<LoginComponent>, public sharedService: SharedService) { }
 
   alert: boolean = false;
 
@@ -23,7 +25,9 @@ export class LoginComponent implements OnInit {
     usuario: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   });
+ 
 
+ 
 
 
 /**
@@ -31,8 +35,8 @@ export class LoginComponent implements OnInit {
  */
   ngOnInit() {
 
-    if (this.usuarioLogin.value.usuario=="kevin" && this.usuarioLogin.value.password=="123") {
-
+    if (this.usuarioLogin.value.usuario== "kevin" && this.usuarioLogin.value.password=="123") {
+      this.sharedService.temp = 1;
       this.router.navigate(['/Citas_medicas']);//Me envia a la ruta cliente
       this.dialogRef.close();//cierra ventana
       

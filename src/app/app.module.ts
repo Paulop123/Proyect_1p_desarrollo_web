@@ -26,7 +26,7 @@ import { Quienes_somosComponent } from './Quienes_somos/Quienes_somos.component'
 import { ProductosComponent } from './Productos/Productos.component';
 import { RegistrosComponent } from './Registros/Registros.component';
 import { ContactosComponent } from './Contactos/Contactos.component';
-
+import { SharedService } from './services/shared.service';
 @NgModule({
   declarations: [									
     AppComponent,
@@ -39,6 +39,7 @@ import { ContactosComponent } from './Contactos/Contactos.component';
       ProductosComponent,
       RegistrosComponent,
       ContactosComponent
+
    ],
   imports: [
     BrowserModule,
@@ -58,7 +59,7 @@ import { ContactosComponent } from './Contactos/Contactos.component';
     ReactiveFormsModule 
 
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
