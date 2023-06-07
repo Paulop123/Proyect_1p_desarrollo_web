@@ -27,8 +27,9 @@ import { ProductosComponent } from './Productos/Productos.component';
 import { RegistrosComponent } from './Registros/Registros.component';
 import { ContactosComponent } from './Contactos/Contactos.component';
 import { SharedService } from './services/shared.service';
+import { Agregar_registrosComponent } from './Agregar_registros/Agregar_registros.component';
 @NgModule({
-  declarations: [									
+  declarations: [										
     AppComponent,
       LoginComponent,
       CabeceraComponent,
@@ -38,8 +39,8 @@ import { SharedService } from './services/shared.service';
       Quienes_somosComponent,
       ProductosComponent,
       RegistrosComponent,
-      ContactosComponent
-
+      ContactosComponent,
+      Agregar_registrosComponent
    ],
   imports: [
     BrowserModule,

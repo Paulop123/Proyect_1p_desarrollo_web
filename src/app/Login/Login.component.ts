@@ -28,16 +28,25 @@ export class LoginComponent implements OnInit {
  
 
  
-
+  ngOnInit() {}
 
 /**
- * Metdo para validar los datos ingresados por el usuario
+ * Metodo para validar los datos ingresados por el usuario
  */
-  ngOnInit() {
+  ingresoLogin() {
 
     if (this.usuarioLogin.value.usuario== "kevin" && this.usuarioLogin.value.password=="123") {
+
       this.sharedService.temp = 1;
       this.router.navigate(['/Citas_medicas']);//Me envia a la ruta cliente
+      this.dialogRef.close();//cierra ventana
+      
+    } 
+
+    if (this.usuarioLogin.value.usuario== "sellan" && this.usuarioLogin.value.password=="123") {
+      
+      this.sharedService.temp = 1;
+      this.router.navigate(['/Registros']);//Me envia a la ruta cliente
       this.dialogRef.close();//cierra ventana
       
     } else {
