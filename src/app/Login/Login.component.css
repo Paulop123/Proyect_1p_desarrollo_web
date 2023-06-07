@@ -15,6 +15,15 @@ form{
     background-color: rgba(144, 238, 144, 0.513);
 }
 
+form h2{
+
+    font-family: sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: rgb(6, 111, 153);
+    text-align: center;
+}
+
 
 .campos-field{
 

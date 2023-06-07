@@ -58,16 +58,25 @@
 
   .banner2 a{
 
-    font-size: 0.7 rem;
+    font-size: 0.8rem;
     font-family: sans-serif;
     font-weight: bold;
     text-decoration: none;
     color: black;
   }
 
+  .nombre_usuario{
+
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
   .nombre-usuario-container {
     display: flex;
     align-items: center;
+    font-family: sans-serif;
     gap: 10px; /* Espacio entre el nombre y el botón */
   }
 
