@@ -1,9 +1,10 @@
+import { Registros_interface } from './../Registro_interface/interface_registro';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Agregar_registrosComponent } from '../Agregar_registros/Agregar_registros.component';
-import { Registros_interface } from '../Registro_interface/interface_registro';
+import { Editar_registroComponent } from '../Editar_registro/Editar_registro.component';
 
 
 
@@ -15,7 +16,7 @@ import { Registros_interface } from '../Registro_interface/interface_registro';
 export class RegistrosComponent implements OnInit {
 
   dataSource: any = [];
-  displayedColumns: string[] = ['cedula_dueno','nombre_dueno','nombre_mascota','raza','edad','direccion', 'telefono_dueno']
+  displayedColumns: string[] = ['cedula_dueno','nombre_dueno','nombre_mascota','raza','edad','direccion', 'telefono_dueno', 'modificar', 'eliminar']
   
   data = [{
         cedula_dueno: '0937827453',
@@ -24,7 +25,8 @@ export class RegistrosComponent implements OnInit {
         raza: 'Labrador Retriver',
         edad: 2,
         direccion: 'Centenario-Guayaquil',
-        telefono_dueno: '2-674309'
+        telefono_dueno: '2-674309',
+        
       },
       {
         cedula_dueno: '0847382901',
@@ -33,7 +35,8 @@ export class RegistrosComponent implements OnInit {
         raza: 'Pitbull',
         edad: 4,
         direccion: 'Las lomas',
-        telefono_dueno: '2-238745'
+        telefono_dueno: '2-238745',
+        
       },
       {
         cedula_dueno: '0946787323',
@@ -42,7 +45,8 @@ export class RegistrosComponent implements OnInit {
         raza: 'Huski Siberiano',
         edad: 6,
         direccion: 'Quito, Ecuador',
-        telefono_dueno: '0978343675'
+        telefono_dueno: '0978343675',
+        
       },
       {
         cedula_dueno: '0936720192',
@@ -51,7 +55,8 @@ export class RegistrosComponent implements OnInit {
         raza: 'Gato persa',
         edad: 2,
         direccion: 'Urdenor',
-        telefono_dueno: '2-230184'
+        telefono_dueno: '2-230184',
+        
       },
       
     ];
@@ -59,6 +64,7 @@ export class RegistrosComponent implements OnInit {
   nuevoPaciente:any;
   nav: any;
 
+  //Constructor que inicializa
   constructor(private router: Router, private dialog:MatDialog) { 
     
     this.nav = this.router.getCurrentNavigation();
@@ -71,6 +77,7 @@ export class RegistrosComponent implements OnInit {
     }
     
   };
+  
 
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource<Registros_interface>(this.data as Registros_interface[]);
@@ -83,6 +90,22 @@ export class RegistrosComponent implements OnInit {
     })
   }
 
+  //Modifica registro de una tabla
+  openDialogModificar(registro: any) {
+    const dialogRef = this.dialog.open(Editar_registroComponent, {
+      width: '50%',
+      data: { registro: registro }
+    });
+  }
+  
+  
+
+  //Elimina un registro de la tabla
+  eliminarRegistro(index: number) {
+    this.data.splice(index, 1);
+    this.dataSource = new MatTableDataSource<Registros_interface>(this.data as Registros_interface[]);
+  }
+  
 }
 
 

@@ -28,8 +28,14 @@ import { RegistrosComponent } from './Registros/Registros.component';
 import { ContactosComponent } from './Contactos/Contactos.component';
 import { SharedService } from './services/shared.service';
 import { Agregar_registrosComponent } from './Agregar_registros/Agregar_registros.component';
+import { Editar_registroComponent } from './Editar_registro/Editar_registro.component';
+import { FormsModule } from '@angular/forms';
+
+
+
+
 @NgModule({
-  declarations: [										
+  declarations: [											
     AppComponent,
       LoginComponent,
       CabeceraComponent,
@@ -40,7 +46,8 @@ import { Agregar_registrosComponent } from './Agregar_registros/Agregar_registro
       ProductosComponent,
       RegistrosComponent,
       ContactosComponent,
-      Agregar_registrosComponent
+      Agregar_registrosComponent,
+      Editar_registroComponent
    ],
   imports: [
     BrowserModule,
@@ -57,7 +64,8 @@ import { Agregar_registrosComponent } from './Agregar_registros/Agregar_registro
     MatTableModule,
     MatToolbarModule,
     MatTabsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [SharedService],

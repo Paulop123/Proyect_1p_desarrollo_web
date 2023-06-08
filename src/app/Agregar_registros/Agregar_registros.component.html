@@ -1,3 +1,41 @@
-<p>
-  Agregar_registros works!
-</p>
+<mat-card>
+
+  <form [formGroup]="pacienteNuevo">
+
+    <div class="registro">
+      <mat-card-title>Nuevo paciente 🐾</mat-card-title>
+    </div>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Cedula dueño" formControlName="cedula_dueno">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Nombres dueño" formControlName="nombre_dueno">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Nombre mascota" formControlName="nombre_mascota">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Raza" formControlName="raza">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Edad" formControlName="edad">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Direccion" formControlName="direccion">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Telefono dueño" formControlName="telefono_dueno">
+    </mat-form-field>
+
+    <button mat-raised-button [disabled]="!pacienteNuevo.valid" (click)="onSubmit()">Aceptar</button>
+    <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>
+  </form>
+
+</mat-card>

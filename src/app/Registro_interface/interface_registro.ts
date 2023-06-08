@@ -6,5 +6,7 @@ export interface Registros_interface {
     raza: string,
     edad: number,
     direccion: string,
-    telefono_dueno: string
+    telefono_dueno: string,
+    modificar: Element,
+    eliminar: Element
 }

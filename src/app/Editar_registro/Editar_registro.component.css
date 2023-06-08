@@ -3,18 +3,14 @@
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
+    
 }
 
-button{
 
-    margin-left: 5%; 
-    align-items: center;  
-}
 
 mat-card{
 
     padding: 0.2rem;
-    
     background-color: lightgray;
 }
 
@@ -25,7 +21,7 @@ form{
     background-color: rgba(144, 238, 144, 0.513);
 }
 
-.registro{
+.registro_modificar{
 
     text-align: center;
     font-weight: bold;
@@ -37,4 +33,3 @@ mat-card-title{
 
     font-size: 1.2rem;
 }
-

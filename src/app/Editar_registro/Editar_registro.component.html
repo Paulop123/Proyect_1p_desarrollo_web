@@ -1,0 +1,56 @@
+<mat-card>
+
+  <form>
+    <div class="registro_modificar">
+      <mat-card-title>Paciente a modificar🐾</mat-card-title>
+    </div>
+  
+    <!-- Campos del formulario -->
+  
+    <mat-form-field class="campos-field">
+      
+      <input matInput [(ngModel)]="registro.cedula_dueno" name="cedula_dueno">
+    </mat-form-field>
+  
+    <mat-form-field class="campos-field">
+  
+      <input type="text" [(ngModel)]="registro.nombre_dueno" name="nombre_dueno">
+    </mat-form-field>
+  
+  
+    <mat-form-field class="campos-field">
+  
+      <input type="text" [(ngModel)]="registro.nombre_mascota" name="nombre_mascota">
+    </mat-form-field>
+  
+  
+    <mat-form-field class="campos-field">
+  
+      <input type="text" [(ngModel)]="registro.raza" name="raza">
+    </mat-form-field>
+  
+  
+  
+    <mat-form-field class="campos-field">
+  
+      <input type="text" [(ngModel)]="registro.edad" name="edad">
+    </mat-form-field>
+  
+  
+    <mat-form-field class="campos-field">
+  
+      <input type="text" [(ngModel)]="registro.direccion" name="direccion">
+    </mat-form-field>
+  
+    <mat-form-field class="campos-field">
+  
+      <input type="text" [(ngModel)]="registro.telefono_dueno" name="telefono_dueno">
+    </mat-form-field>
+  
+  
+    <!-- Botones de guardar y cancelar -->
+    <button mat-raised-button color="primary" (click)="guardarCambios()">Guardar cambios</button>
+    <button mat-raised-button color="warn" (click)="cancelar()">Cancelar</button>
+  </form>
+
+</mat-card>
