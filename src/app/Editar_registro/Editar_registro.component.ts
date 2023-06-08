@@ -15,28 +15,53 @@ import { FormsModule } from '@angular/forms';
 })
 export class Editar_registroComponent implements OnInit {
 
-  registro: any;
 
-  constructor(@Inject(MAT_DIALOG_DATA) data: any, private router: Router, private dialogRef: MatDialogRef<Editar_registroComponent>) {
+  // Variables para modificar los datos
+  nuevaCedulaDueno: string
+  nuevoNombreDueno: string;
+  nuevaNombreMascota: string;
+  nuevaRaza: string;
+  nuevaEdad: number;
+  nuevaDireccion: string;
+  nuevoTelefonoDueno: string;
 
-    this.registro = { ...data };
-   }
-
-  ngOnInit(): void {
+  constructor(
+    public dialogRef: MatDialogRef<Editar_registroComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {
+    // Asignar los valores iniciales de los campos de modificación
+    this.nuevaCedulaDueno = data.cedula_dueno;
+    this.nuevoNombreDueno = data.nombre_dueno;
+    this.nuevaNombreMascota = data.nombre_mascota;
+    this.nuevaRaza = data.raza;
+    this.nuevaEdad = data.edad;
+    this.nuevaDireccion = data.direccion;
+    this.nuevoTelefonoDueno = data.telefono_dueno;
   }
 
+  // Función para guardar los cambios y cerrar el diálogo
+  guardarCambios(): void {
+    // Aquí puedes realizar las acciones necesarias para guardar los cambios en el registro
+    // Puedes acceder a los nuevos valores a través de las variables: this.nuevoNombreDueno, this.nuevaNombreMascota, etc.
 
-
-  guardarCambios(){
-
-
+    // Cerrar el diálogo y pasar los datos modificados al componente padre
+    this.dialogRef.close({
+      nuevaCedulaDueno: this.nuevaCedulaDueno,
+      nuevoNombreDueno: this.nuevoNombreDueno,
+      nuevaNombreMascota: this.nuevaNombreMascota,
+      nuevaRaza: this.nuevaRaza,
+      nuevaEdad: this.nuevaEdad,
+      nuevaDireccion: this.nuevaDireccion,
+      nuevoTelefonoDueno: this.nuevoTelefonoDueno
+    });
   }
-  
-  cancelar()
-  {
-    this.dialogRef.close(); 
+
+  // Función para cancelar y cerrar el diálogo sin guardar cambios
+  cancelar(): void {
+    this.dialogRef.close();
   }
 
+  ngOnInit(){}
 
 
 }

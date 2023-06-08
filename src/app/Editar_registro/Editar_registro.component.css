@@ -1,16 +1,21 @@
 
-.campos-field {
-    width: 60%;
+.campos-field input{
+    width: 80%;
+    margin: 0 auto;
     margin-left: 20%;
     margin-right: 20%;
-    
+    background-color: white;
 }
 
+button{
 
+    margin-left: 5%; 
+    align-items: center;  
+}
 
 mat-card{
 
-    padding: 0.2rem;
+    padding: 0.1rem;
     background-color: lightgray;
 }
 
@@ -21,15 +26,10 @@ form{
     background-color: rgba(144, 238, 144, 0.513);
 }
 
-.registro_modificar{
-
-    text-align: center;
-    font-weight: bold;
-    font-family: sans-serif;
-    margin-bottom: 1%;
-}
 
 mat-card-title{
 
     font-size: 1.2rem;
+    text-align: center;
+    font-weight: bolder;
 }

@@ -2,49 +2,45 @@
 
   <form>
     <div class="registro_modificar">
-      <mat-card-title>Paciente a modificar🐾</mat-card-title>
+      <mat-card-title>Modificar paciente🐾</mat-card-title>
     </div>
   
     <!-- Campos del formulario -->
   
+
     <mat-form-field class="campos-field">
       
-      <input matInput [(ngModel)]="registro.cedula_dueno" name="cedula_dueno">
+      <input type="text" [(ngModel)]="nuevaCedulaDueno" name="cedula_dueno">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      
+      <input type="text" [(ngModel)]="nuevoNombreDueno" name="nombre_dueno">
     </mat-form-field>
   
     <mat-form-field class="campos-field">
   
-      <input type="text" [(ngModel)]="registro.nombre_dueno" name="nombre_dueno">
-    </mat-form-field>
-  
-  
-    <mat-form-field class="campos-field">
-  
-      <input type="text" [(ngModel)]="registro.nombre_mascota" name="nombre_mascota">
-    </mat-form-field>
-  
-  
-    <mat-form-field class="campos-field">
-  
-      <input type="text" [(ngModel)]="registro.raza" name="raza">
-    </mat-form-field>
-  
-  
-  
-    <mat-form-field class="campos-field">
-  
-      <input type="text" [(ngModel)]="registro.edad" name="edad">
-    </mat-form-field>
-  
-  
-    <mat-form-field class="campos-field">
-  
-      <input type="text" [(ngModel)]="registro.direccion" name="direccion">
+      <input type="text" [(ngModel)]="nuevaNombreMascota" name="nombre_mascota">
     </mat-form-field>
   
     <mat-form-field class="campos-field">
   
-      <input type="text" [(ngModel)]="registro.telefono_dueno" name="telefono_dueno">
+      <input type="text" [(ngModel)]="nuevaRaza" name="raza">
+    </mat-form-field>
+  
+    <mat-form-field class="campos-field">
+  
+      <input type="text" [(ngModel)]="nuevaEdad" name="edad">
+    </mat-form-field>
+  
+    <mat-form-field class="campos-field">
+  
+      <input type="text" [(ngModel)]="nuevaDireccion" name="direccion">
+    </mat-form-field>
+  
+    <mat-form-field class="campos-field">
+  
+      <input type="text" [(ngModel)]="nuevoTelefonoDueno" name="telefono_dueno">
     </mat-form-field>
   
   

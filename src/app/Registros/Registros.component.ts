@@ -18,7 +18,7 @@ export class RegistrosComponent implements OnInit {
   dataSource: any = [];
   displayedColumns: string[] = ['cedula_dueno','nombre_dueno','nombre_mascota','raza','edad','direccion', 'telefono_dueno', 'modificar', 'eliminar']
   
-  data = [{
+  data= [{
         cedula_dueno: '0937827453',
         nombre_dueno: 'kevin Lañon',      
         nombre_mascota: 'Max',
@@ -91,10 +91,25 @@ export class RegistrosComponent implements OnInit {
   }
 
   //Modifica registro de una tabla
-  openDialogModificar(registro: any) {
+  openDialogModificar(element: any): void {
     const dialogRef = this.dialog.open(Editar_registroComponent, {
       width: '50%',
-      data: { registro: registro }
+      data: element
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        const index = this.data.findIndex(item => item.cedula_dueno === element.cedula_dueno);
+        if (index !== -1) {
+          this.data[index].nombre_dueno = result.nuevoNombreDueno;
+          this.data[index].nombre_mascota = result.nuevaNombreMascota;
+          this.data[index].raza = result.nuevaRaza;
+          this.data[index].edad = result.nuevaEdad;
+          this.data[index].direccion = result.nuevaDireccion;
+          this.data[index].telefono_dueno = result.nuevoTelefonoDueno;
+          this.dataSource.data = this.data;
+        }
+      }
     });
   }
   

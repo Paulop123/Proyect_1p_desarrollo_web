@@ -17,10 +17,30 @@
 
 table {
     width: 100%;
+    background-color: bisque;
+  }
+
+  th{
+
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 0.8rem;
   }
 
   button{
 
     margin-left: 2%;
+    margin-bottom: 1%;
   }
+
+  .modificar{
+
+    color: goldenrod;
+  }
+
+  .eliminar{
+
+    color: red;
+  }
+
   

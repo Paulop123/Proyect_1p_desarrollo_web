@@ -15,7 +15,7 @@
 
   
   <ng-container matColumnDef="cedula_dueno">
-    <th mat-header-cell *matHeaderCellDef> cedula dueño </th>
+    <th mat-header-cell *matHeaderCellDef> Cedula dueño </th>
     <td mat-cell *matCellDef="let element"> {{element.cedula_dueno}} </td>
 
   </ng-container>
@@ -50,27 +50,25 @@
     <td mat-cell *matCellDef="let element"> {{element.telefono_dueno}} </td>
   </ng-container>
 
+  <!--Columna para accion de modificar-->
+  <ng-container matColumnDef="modificar">
+    <th mat-header-cell *matHeaderCellDef> Modificar </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button (click)="openDialogModificar(element)">
+        <mat-icon class="modificar">edit</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
   <!--Columna para accion de eliminar-->
   <ng-container matColumnDef="eliminar">
     <th mat-header-cell *matHeaderCellDef>Eliminar</th>
     <td mat-cell *matCellDef="let element">
       <button mat-icon-button (click)="eliminarRegistro(element)">
-        <mat-icon>delete</mat-icon>
+        <mat-icon class="eliminar">delete</mat-icon>
       </button>
     </td>
   </ng-container>
-
-  <!-- Columna de Modificar -->
-<ng-container matColumnDef="modificar">
-  <th mat-header-cell *matHeaderCellDef>Modificar</th>
-  <td mat-cell *matCellDef="let registro">
-    <button mat-icon-button (click)="openDialogModificar(registro)">
-      <mat-icon>edit</mat-icon>
-    </button>
-  </td>
-</ng-container>
-
-
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
