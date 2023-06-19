@@ -34,22 +34,25 @@ export class LoginComponent implements OnInit {
  * Metodo para validar los datos ingresados por el usuario
  */
   ingresoLogin() {
+    if (this.usuarioLogin.value.usuario== "sellan" && this.usuarioLogin.value.password=="123") {
+      /**this.sharedService.sesion = 7;
+       */
+      this.sharedService.setRoles(1); // Establecer roles a 1 para el usuario sellan
+      this.router.navigate(['']);//Me envia a la ruta cliente
+      this.dialogRef.close();//cierra ventana
+      
+    }
 
-    if (this.usuarioLogin.value.usuario== "kevin" && this.usuarioLogin.value.password=="123") {
-
-      this.sharedService.temp = 1;
+if (this.usuarioLogin.value.usuario== "kevin" && this.usuarioLogin.value.password=="123") {
+       /**this.sharedService.sesion = 7;
+      this.sharedService.temp = 2; */
+      this.sharedService.setRoles(2);
       this.router.navigate(['/Citas_medicas']);//Me envia a la ruta cliente
       this.dialogRef.close();//cierra ventana
       
     } 
 
-    if (this.usuarioLogin.value.usuario== "sellan" && this.usuarioLogin.value.password=="123") {
-      
-      this.sharedService.temp = 1;
-      this.router.navigate(['/Registros']);//Me envia a la ruta cliente
-      this.dialogRef.close();//cierra ventana
-      
-    } else {
+     else {
 
       this.alert= true;
       setTimeout(() => this.alert= false, 4000);

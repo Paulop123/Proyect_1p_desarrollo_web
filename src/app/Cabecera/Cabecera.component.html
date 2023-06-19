@@ -12,27 +12,51 @@
   <div class="espacio"></div>
   <span class="banner2"> <a href="http://localhost:4200/Quienes_somos">Quienes somos</a> </span>
 
+
+
+  <!--seccion de citos-->
   <div class="espacio"></div>
+  <div *ngIf="sharedService.getRoles() === 2  ">
   <span class="banner2"> <a href="http://localhost:4200/Citas_medicas">Citas</a> </span>
+</div>
 
-  <div class="espacio"></div>
+<!--seccion de registo-->
+
+
+<div class="espacio"></div>
+
+<!--seccion de Productos-->
+<div *ngIf="sharedService.getRoles() ===1 ">
   <span class="banner2"> <a href="http://localhost:4200/Productos">Productos</a> </span>
+</div>
 
-  <div class="espacio"></div>
+<!--seccion de Productos-->
+
+
+
+<div class="espacio"></div>
+<!--seccion de registo-->
+
+  <div *ngIf="sharedService.getRoles() === 1">
   <span class="banner2"> <a href="http://localhost:4200/Registros">Registros</a> </span>
+  </div>
+
+<!--seccion de registo-->
+
 
   <div class="espacio"></div>
   <span class="banner2"> <a href="http://localhost:4200/Contactos">Contactos</a> </span>
 
   <div class="espacio"></div>
 
-  <div *ngIf="1 !== sharedService.getTemp()">
+
+  <div *ngIf="2 === temp">
     <button mat-icon-button class="icono_inicio_sesion" (click)="inicioSesion()">
       <mat-icon>account_box</mat-icon>
     </button>
   </div>
 
-  <div *ngIf="1 === sharedService.getTemp()">
+  <div *ngIf="1 === temp "  >
     <div class="nombre-usuario-container">
     <span class="nombre_usuario">Bienvenido <br> Usuario</span>
     <div class="espacio"></div>

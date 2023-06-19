@@ -34,8 +34,9 @@ import { FormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
-  declarations: [											
+  declarations: [												
     AppComponent,
       LoginComponent,
       CabeceraComponent,
@@ -47,7 +48,8 @@ import { FormsModule } from '@angular/forms';
       RegistrosComponent,
       ContactosComponent,
       Agregar_registrosComponent,
-      Editar_registroComponent
+      Editar_registroComponent,
+      
    ],
   imports: [
     BrowserModule,

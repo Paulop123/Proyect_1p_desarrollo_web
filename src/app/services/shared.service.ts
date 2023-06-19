@@ -4,15 +4,22 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedService {
-  temp: any;
+  roles:any= null;
 
-  constructor() { }
+  constructor() {
+    this.roles = localStorage.getItem('roles');
+   }
 
-  getTemp() {
-    return this.temp;
+  getRoles() {
+    console.log('Roles:', this.roles);
+    return this.roles;
   }
 
-  setTemp(value: any) {
-    this.temp = value;
+  setRoles(value: any) {
+    this.roles= value;
+    localStorage.setItem('roles', value);
   }
+
 }
+
+
