@@ -30,13 +30,17 @@ import { SharedService } from './services/shared.service';
 import { Agregar_registrosComponent } from './Agregar_registros/Agregar_registros.component';
 import { Editar_registroComponent } from './Editar_registro/Editar_registro.component';
 import { FormsModule } from '@angular/forms';
-
+import { CitasComponent } from './Citas/Citas.component';
+import { Agregar_cita_medicaComponent } from './Agregar_cita_medica/Agregar_cita_medica.component';
+import { MatNativeDateModule } from '@angular/material/core'; 
+import { Editar_productosComponent } from './Editar_productos/Editar_productos.component';
+import { Agregar_productosComponent } from './Agregar_productos/Agregar_productos.component';
 
 
 
 
 @NgModule({
-  declarations: [												
+  declarations: [																		
     AppComponent,
       LoginComponent,
       CabeceraComponent,
@@ -49,7 +53,11 @@ import { FormsModule } from '@angular/forms';
       ContactosComponent,
       Agregar_registrosComponent,
       Editar_registroComponent,
-      
+      CitasComponent,
+      Agregar_cita_medicaComponent,
+      ProductosComponent,
+      Editar_productosComponent,
+      Agregar_productosComponent
    ],
   imports: [
     BrowserModule,
@@ -67,8 +75,9 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatTabsModule,
     ReactiveFormsModule,
-    FormsModule
-
+    FormsModule,
+    MatNativeDateModule
+    
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

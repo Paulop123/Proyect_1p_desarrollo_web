@@ -1,0 +1,14 @@
+
+.agendar_cita {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .agendar_cita button{
+    
+    margin-top: 5%;
+  }
+  

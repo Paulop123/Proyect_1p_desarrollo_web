@@ -1,11 +1,70 @@
 
 
-<div class="proximamente">
+<div class="registros">
 
   <p>
-    Nuevos productos para mascotas🐶🐤 - Proximamente🕒
+    Productos para mascotas🐶🐤 
   </p>
 </div>
+
+<br>
+<button mat-raised-button color="primary" (click)="openDialogAgregar()"> Agregar nuevo producto</button>
+
+
+<br><br>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  
+  <ng-container matColumnDef="nombre_producto">
+    <th mat-header-cell *matHeaderCellDef> Nombre del producto </th>
+    <td mat-cell *matCellDef="let element"> {{element.nombre_producto}} </td>
+
+  </ng-container>
+
+  <ng-container matColumnDef="marca">
+    <th mat-header-cell *matHeaderCellDef> Marca </th>
+    <td mat-cell *matCellDef="let element"> {{element.marca}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="precio_unitario">
+    <th mat-header-cell *matHeaderCellDef> Precio unitario</th>
+    <td mat-cell *matCellDef="let element"> {{element.precio_unitario}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nombre_proveedor">
+    <th mat-header-cell *matHeaderCellDef> Nombre del proovedor </th>
+    <td mat-cell *matCellDef="let element"> {{element.nombre_proveedor}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="hecho_para">
+    <th mat-header-cell *matHeaderCellDef> Hecho para </th>
+    <td mat-cell *matCellDef="let element"> {{element.hecho_para}} </td>
+  </ng-container>
+
+  <!--Columna para accion de modificar-->
+  <ng-container matColumnDef="modificar">
+    <th mat-header-cell *matHeaderCellDef> Modificar </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button (click)="openDialogModificar(element)">
+        <mat-icon class="modificar">edit</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <!--Columna para accion de eliminar-->
+  <ng-container matColumnDef="eliminar">
+    <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button (click)="eliminarRegistro(element)">
+        <mat-icon class="eliminar">delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
 
 
 

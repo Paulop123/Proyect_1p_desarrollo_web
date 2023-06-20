@@ -1,0 +1,35 @@
+<mat-card>
+  <form [formGroup]="nuevoProducto">
+    <div class="registro">
+      <mat-card-title>Nuevo Producto 📦</mat-card-title>
+    </div>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Nombre del producto" formControlName="nombre_producto">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Marca" formControlName="marca">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Precio unitario" formControlName="precio_unitario">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Nombre del proovedor" formControlName="nombre_proveedor">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <mat-select placeholder="Hecho para" formControlName="hecho_para">
+        <mat-option value="Perros">Perros</mat-option>
+        <mat-option value="Gatos">Gatos</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <button mat-raised-button [disabled]="!nuevoProducto.valid" (click)="onSubmit()">Aceptar</button>
+    <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>
+  </form>
+</mat-card>
+

@@ -47,7 +47,7 @@ if (this.usuarioLogin.value.usuario== "kevin" && this.usuarioLogin.value.passwor
        /**this.sharedService.sesion = 7;
       this.sharedService.temp = 2; */
       this.sharedService.setRoles(2);
-      this.router.navigate(['/Citas_medicas']);//Me envia a la ruta cliente
+      this.router.navigate(['/Citas']);//Me envia a la ruta cliente
       this.dialogRef.close();//cierra ventana
       
     } 

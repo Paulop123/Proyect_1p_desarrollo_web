@@ -1,0 +1,40 @@
+<mat-card>
+  <form [formGroup]="nuevaCita">
+    <div class="registro">
+      <mat-card-title>Nueva cita 🐾</mat-card-title>
+    </div>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Nombre del paciente" formControlName="nombre_paciente">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <mat-select placeholder="Tipo de servicio" formControlName="tipo_servicio">
+        <mat-option value="Chequeo general">Chequeo general</mat-option>
+        <mat-option value="Cirugia">Cirugía</mat-option>
+        <mat-option value="Rehabilitacion">Rehabilitación</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput [matDatepicker]="picker" placeholder="Fecha de la cita" formControlName="fecha_cita">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <input matInput placeholder="Hora" formControlName="hora">
+    </mat-form-field>
+
+    <mat-form-field class="campos-field">
+      <mat-select placeholder="Veterinario" formControlName="veterinario">
+        <mat-option value="Jose Villegas">Jose Villegas</mat-option>
+        <mat-option value="Pedro Ximenez">Pedro Ximenez</mat-option>
+        <mat-option value="Cristian Erazo">Cristian Erazo</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button [disabled]="!nuevaCita.valid" (click)="onSubmit()">Aceptar</button>
+    <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>
+  </form>
+</mat-card>
