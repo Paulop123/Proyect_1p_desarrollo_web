@@ -8,9 +8,18 @@
     max-width: 2560px;
     min-width: 850px;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 5%;
     font-family: sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
+}
+.paguinaContactos img{
+
+    width: 1480px;
+    height: 700px;
+    border: solid black;
+    margin-left: 25px;
+    margin-top: 10px;
+
 }

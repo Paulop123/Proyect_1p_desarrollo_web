@@ -16,6 +16,7 @@ export class ProductosComponent implements OnInit {
 
   dataSource: any = [];
   displayedColumns: string[] = ['nombre_producto', 'marca', 'precio_unitario', 'nombre_proveedor', 'hecho_para', 'modificar', 'eliminar']
+  buscarTexto: string = '';
 
   data = [{
     nombre_producto: 'Mi mascot',
@@ -119,6 +120,18 @@ export class ProductosComponent implements OnInit {
   eliminarRegistro(index: number) {
     this.data.splice(index, 1);
     this.dataSource = new MatTableDataSource<Interface_productos>(this.data as Interface_productos[]);
+  }
+
+  buscarRegistros() {
+    const texto = this.buscarTexto.toLowerCase();
+    const resultados = this.data.filter(
+      item =>
+        item.nombre_producto.toLowerCase().includes(texto) ||
+        item.marca.toLowerCase().includes(texto) ||
+        item.nombre_proveedor.toLowerCase().includes(texto) ||
+        item.hecho_para.toLowerCase().includes(texto)
+    );
+    this.dataSource.data = resultados;
   }
 
 }

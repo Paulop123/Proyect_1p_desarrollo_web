@@ -8,8 +8,12 @@
 </div>
 
 <br>
+<div>
+<mat-form-field>
+  <input matInput placeholder="Buscar" [(ngModel)]="buscarTexto" (keyup)="buscarRegistros()">
+</mat-form-field>
 <button mat-raised-button color="primary" (click)="openDialogAgregar()"> Agregar nuevo producto</button>
-
+</div>
 
 <br><br>
 

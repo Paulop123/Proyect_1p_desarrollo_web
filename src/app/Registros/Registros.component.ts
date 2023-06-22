@@ -63,6 +63,7 @@ export class RegistrosComponent implements OnInit {
   
   nuevoPaciente:any;
   nav: any;
+  buscarTexto: string = '';
 
   //Constructor que inicializa
   constructor(private router: Router, private dialog:MatDialog) { 
@@ -83,6 +84,27 @@ export class RegistrosComponent implements OnInit {
     this.dataSource = new MatTableDataSource<Registros_interface>(this.data as Registros_interface[]);
     console.log(this.data);
   }
+
+  buscarRegistros(): void {
+    if (this.buscarTexto.trim() !== '') {
+      const texto = this.buscarTexto.toLowerCase();
+      const resultados = this.data.filter(registro => {
+        return (
+          registro.cedula_dueno.toLowerCase().includes(texto) ||
+          registro.nombre_dueno.toLowerCase().includes(texto) ||
+          registro.nombre_mascota.toLowerCase().includes(texto) ||
+          registro.raza.toLowerCase().includes(texto) ||
+          registro.edad.toString().includes(texto) ||
+          registro.direccion.toLowerCase().includes(texto) ||
+          registro.telefono_dueno.toLowerCase().includes(texto)
+        );
+      });
+      this.dataSource.data = resultados;
+    } else {
+      this.dataSource.data = this.data;
+    }
+  }
+
 
   openDialogAgregar(){
     this.dialog.open(Agregar_registrosComponent, {

@@ -17,7 +17,9 @@ export class Citas_medicasComponent implements OnInit {
   
   dataSource: any = [];
   displayedColumns: string[] = ['nombre_paciente','tipo_servicio','fecha_cita','hora','veterinario', 'eliminar']
-  
+  buscarTexto: string = '';
+
+
   data= [{
         nombre_paciente: 'Rex',
         tipo_servicio: 'Chequeo general',      
@@ -106,4 +108,15 @@ export class Citas_medicasComponent implements OnInit {
     this.dataSource = new MatTableDataSource<Interface_cita>(this.data as Interface_cita[]);
   }
 
+
+  buscarRegistros() {
+    const texto = this.buscarTexto.toLowerCase();
+    const resultados = this.data.filter(
+      item =>
+        item.nombre_paciente.toLowerCase().includes(texto) ||
+        item.tipo_servicio.toLowerCase().includes(texto) ||
+        item.veterinario.toLowerCase().includes(texto)
+    );
+    this.dataSource.data = resultados;
+  }
 }
