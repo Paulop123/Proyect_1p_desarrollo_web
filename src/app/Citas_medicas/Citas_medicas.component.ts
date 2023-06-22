@@ -21,53 +21,46 @@ export class Citas_medicasComponent implements OnInit {
 
 
   data= [{
-        nombre_paciente: 'Rex',
+        nombre_paciente: 'Max',
         tipo_servicio: 'Chequeo general',      
         fecha_cita: new Date('2023-06-22'),
         hora: 8,
         veterinario: 'Pedro Ximenes',
       },
       {
-        nombre_paciente: 'Toba',
+        nombre_paciente: 'Tier',
         tipo_servicio: 'Cirugia',      
         fecha_cita: new Date('2023-05-10'),
         hora: 20,
         veterinario: 'Pedro Ximenes',
       },
       {
-        nombre_paciente: 'Rex',
+        nombre_paciente: 'Moos',
         tipo_servicio: 'Chequeo general',      
         fecha_cita: new Date('2023-06-22'),
         hora: 8,
         veterinario: 'Cristian Erazo',
       },
       {
-        nombre_paciente: 'Rex',
+        nombre_paciente: 'Ringo',
         tipo_servicio: 'Chequeo general',      
         fecha_cita: new Date('2023-06-22'),
         hora: 16,
-        veterinario: 'Pedro Ximenes',
+        veterinario: 'Jose Villegas',
       },
       {
-        nombre_paciente: 'Rex',
+        nombre_paciente: 'Fido',
         tipo_servicio: 'Chequeo general',      
         fecha_cita: new Date('2023-06-22'),
         hora: 19,
         veterinario: 'Pedro Ximenes',
       },
       {
-        nombre_paciente: 'Rex',
+        nombre_paciente: 'Lua',
         tipo_servicio: 'Chequeo general',      
         fecha_cita: new Date('2023-06-23'),
         hora: 10,
-        veterinario: 'Pedro Ximenes',
-      },
-      {
-        nombre_paciente: 'Rex',
-        tipo_servicio: 'Chequeo general',      
-        fecha_cita: new Date('2023-06-23'),
-        hora: 11,
-        veterinario: 'Pedro Ximenes',
+        veterinario: 'Jose Villegas',
       },
 
       

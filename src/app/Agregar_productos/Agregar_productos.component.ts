@@ -44,6 +44,8 @@ export class Agregar_productosComponent implements OnInit {
 
     this.dialogRef.close();
     this.redirectTo('/Productos', objToSend);
+
+    alert("Producto agregado con exito")
   }
 
   redirectTo(uri: string, objToSend: NavigationExtras) {

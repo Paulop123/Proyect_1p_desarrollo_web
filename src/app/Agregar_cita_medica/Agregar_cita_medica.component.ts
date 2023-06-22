@@ -45,6 +45,7 @@ export class Agregar_cita_medicaComponent implements OnInit {
 
     this.dialogRef.close();
     this.redirectTo('/Citas_medicas', objToSend);
+    alert("Cita medica agregada con exito")
   }
 
   redirectTo(uri: string, objToSend: NavigationExtras) {

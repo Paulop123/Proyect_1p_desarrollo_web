@@ -47,6 +47,8 @@ export class Agregar_registrosComponent implements OnInit {
     this.dialogRef.close(); 
     this.redirectTo('/Registros', objToSend);
 
+    alert("Registro agregado con exito")
+
   }
 
   redirectTo(uri:string, objToSend:NavigationExtras){

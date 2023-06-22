@@ -58,6 +58,16 @@ export class RegistrosComponent implements OnInit {
         telefono_dueno: '2-230184',
         
       },
+      {
+        cedula_dueno: '0830267382',
+        nombre_dueno: 'Gabriela Santillan',      
+        nombre_mascota: 'Lua',
+        raza: 'Samoyedo',
+        edad: 5,
+        direccion: 'Urdenor',
+        telefono_dueno: '2-457382',
+        
+      },
       
     ];
   
